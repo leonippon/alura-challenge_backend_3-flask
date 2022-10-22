@@ -1,0 +1,60 @@
+{% extends "/parts/main.html" %}
+{% block content %}
+
+
+				<!-- Imported -->
+					<section id="imported" class="wrapper style3">
+						<div class="inner">
+							<h3>Importações</h3>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											{% for value in header_dict.values() %}
+											<th>{{ value }}</th>
+											{% endfor %}
+											<th>Detalhar</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for transaction in transaction_list %}
+											<tr>
+												<form method="POST" action="{{ url_for('bp_transactions.details', tr_date=transaction[0].transaction_date) }}">
+													{% for key in header_dict.keys() %}
+														<td>{{ transaction[0][key] }}</td>
+													{% endfor %}
+													<td><button class="button submit">Detalhar</button></td>
+												</form>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+
+
+				<!-- Import -->
+					<section id="import" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Importar</h2>
+							<div class="split style1">
+								<section>
+									<form method="POST" action="{{ url_for('bp_transactions.imports') }}" enctype="multipart/form-data">
+										<div class="fields">
+											<div class="field whole">
+												<label for="name">Arquivo de Transações</label>
+												<input type="file" name="file" id="file" />
+											</div>
+										</div>
+										<ul class="actions">
+											<li><button class="button submit">Fazer Upload</button></li>
+										</ul>
+									</form>
+								</section>
+							</div>
+						</div>
+					</section>
+
+
+{% endblock %}

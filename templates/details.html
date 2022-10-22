@@ -1,0 +1,55 @@
+{% extends "/parts/main.html" %}
+{% block content %}
+
+				<!-- Imported -->
+					<section id="three" class="wrapper style3">
+						<div class="inner">
+
+							<!-- Details -->
+								<h3>Detalhes da Importação</h3>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													{% for value in header_u_dict.values() %}
+													<th>{{ value }}</th>
+													{% endfor %}
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													{% for item in user_list[0] %}
+													<td>{{ item }}</td>
+													{% endfor %}
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+							<!-- Trasações -->
+								<h3>Transações Importadas</h3>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													{% for value in header_dict.values() %}
+													<th>{{ value }}</th>
+													{% endfor %}
+												</tr>
+											</thead>
+											<tbody>
+												{% for transaction in transaction_list %}
+												<tr>
+													{% for item in transaction %}
+													<td>{{ item }}</td>
+													{% endfor %}
+												</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+
+						</div>
+					</section>
+
+{% endblock %}

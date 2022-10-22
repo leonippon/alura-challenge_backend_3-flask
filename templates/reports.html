@@ -1,0 +1,109 @@
+{% extends "/parts/main.html" %}
+{% block content %}
+
+
+			<!-- Date Selector -->
+					<section id="date_selector" class="wrapper style3">
+						<div class="inner">
+							<form method="POST" action="{{ url_for('bp_transactions.reports') }}">
+								<h3>Relatório de Transações Suspeitas</h3>
+								<div class="col-12">
+									<select id="demo-category" name="Transações">
+										<option value="">Selecione uma data!</option>
+										{% for date in date_list %}
+										<option value="{{ date }}">{{ date }}</option>
+										{% endfor %}
+									</select>
+								</div>
+								<br>
+								<button class="button submit">Gerar Relatório</button>
+							</form>
+						</div>
+					</section>
+
+
+			<!-- Report -->
+				<section id="imported" class="wrapper style2">
+					<div class="inner">
+						<h3>Transações Suspeitas</h3>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										{% for value in header_dict_1.values() %}
+										<th>{{ value }}</th>
+										{% endfor %}
+									</tr>
+								</thead>
+								<tbody>
+									{% for transaction in transaction_list_1 %}
+										<tr>
+											{% for item in transaction %}
+												<td>{{ item }}</td>
+											{% endfor %}
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- Report -->
+				<section id="imported" class="wrapper style1">
+					<div class="inner">
+						<h3>Contas Suspeitas</h3>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										{% for value in header_dict_2.values() %}
+											<th>{{ value }}</th>
+										{% endfor %}
+									</tr>
+								</thead>
+								<tbody>
+									{% for transaction in transaction_list_2 %}
+										<tr>
+											{% for item in transaction %}
+												<td>{{ item }}</td>
+											{% endfor %}
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- Report -->
+				<section id="imported" class="wrapper style2">
+					<div class="inner">
+						<h3>Agências Suspeitas</h3>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										{% for value in header_dict_3.values() %}
+										<th>{{ value }}</th>
+										{% endfor %}
+									</tr>
+								</thead>
+								<tbody>
+									{% for transaction in transaction_list_3 %}
+										<tr>
+											{% for item in transaction %}
+												<td>{{ item }}</td>
+											{% endfor %}
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+
+{% endblock %}

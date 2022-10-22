@@ -1,0 +1,62 @@
+{% extends "/parts/main.html" %}
+{% block content %}
+
+
+			<!-- Users -->
+				<section id="three" class="wrapper style3">
+					<div class="inner">
+						<h3>Usuários</h3>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										{% for value in header_dict.values() %}
+										<th>{{ value }}</th>
+										{% endfor %}
+									</tr>
+								</thead>
+								<tbody>
+									{% for user in users_list %}
+										<tr>
+											{% for key in header_dict.keys() %}
+												<td>{{ user[0][key] }}</td>
+											{% endfor %}
+											<td><a method="GET" href="{{ url_for('bp_users.user_details', user_data=user[0].email) }}" class="button small">Editar</a></td>
+											<td><a method="POST" href="{{ url_for('bp_users.user_delete', user_data=user[0].email) }}" class="button small">Excluir</a></td>
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- Add -->
+				<section id="login" class="wrapper style2 fade-up">
+					<div class="inner">
+						<h3>Adicionar Novo Usuário</h3>
+						<div class="split style1">
+							<form method="POST" action="{{ url_for('bp_users.users') }}">
+								<input type="hidden" name="from_page" value="{{ from_page }}" />
+								<input type="hidden" name="test_mail" value="{{ test_mail }}" />
+									<div class="fields">
+										<div class="field whole">
+											<label for="name">Usuário</label>
+											<input type="text" name="username" id="username" />
+										</div>
+										<div class="field whole">
+											<label for="name">E-mail</label>
+											<input type="email" name="email" id="email" />
+										</div>
+									</div>
+									<ul class="actions">
+										<button class="button submit">Criar</a>
+									</ul>
+							</form>
+						</div>
+					</div>
+				</section>
+
+
+{% endblock %}

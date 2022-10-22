@@ -1,0 +1,33 @@
+{% macro sdb_user() %}
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/imports">Transações</a></li>
+							<li><a href="/reports">Relatórios</a></li>
+							<li><a href="/users">Usuários</a></li>
+							<li><a href="/logout">Log Out</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+{% endmacro %}
+
+{% macro sdb_anon() %}
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="/login">Log In</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+{% endmacro %}

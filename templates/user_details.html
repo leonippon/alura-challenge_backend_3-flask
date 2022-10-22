@@ -1,0 +1,60 @@
+{% extends "/parts/main.html" %}
+{% block content %}
+
+
+			<!-- Users -->
+				<section id="user_details" class="wrapper style3">
+					<div class="inner">
+						<h3>Editar Usuário</h3>
+						<div class="table-wrapper split style1">
+							<table class="alt">
+								<tbody>
+									{% for user in user_list %}
+									<tr>
+										{% for key in header_dict.keys() %}
+										<td>{{ user[0][key] }}</td>
+										{% endfor %}
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- Edit -->
+				<section id="login" class="wrapper style2 fade-up">
+					<div class="inner">
+						<h3>Editar Usuário</h3>
+						<p>Deixe em branco os campos que não deseja editar.</p>
+						<div class="split style1">
+							<section>
+								<form method="POST" action="{{ url_for('bp_users.user_details_update') }}">
+									<input type="hidden" name="user_email" value="{{ user_list[0][0].email }}" />
+									<input type="hidden" name="from_page" value="{{ from_page }}" />
+									<div class="fields">
+										<div class="field whole">
+											<label for="name">Usuário</label>
+											<input type="text" name="username" id="username" placeholder="{{ user_list[0][0].username }}" />
+										</div>
+										<div class="field whole">
+											<label for="email">E-mail</label>
+											<input type="email" name="email" id="email" placeholder="{{ user_list[0][0].email }}" />
+										</div>
+										<div class="field whole">
+											<label for="new_password">Senha Nova</label>
+											<input type="password" name="new_password" id="new_password" />
+										</div>
+										<div class="field whole">
+											<button class="button submit">Editar</button>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+				</section>
+
+
+{% endblock %}
