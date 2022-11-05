@@ -1,4 +1,4 @@
-## Alura Challenges | Back End 3ª Edição | Aplicação Web de Análise de Transações Financeiras em Flask
+## Alura Challenges | Back End 3ª Edição | Aplicação Web para Análise de Transações Financeiras em Flask
 [ENGLISH VERSION](https://github.com/leonippon/alura-challenge_backend_4-node/edit/main/README.en.md)
 
 #### História
