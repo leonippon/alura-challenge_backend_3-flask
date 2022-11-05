@@ -2,8 +2,11 @@
 [ENGLISH VERSION](https://github.com/leonippon/alura-challenge_backend_4-node/edit/main/README.en.md)
 
 #### História
-> Precisamos desenvolver uma aplicação Web tradicional(server-side) para realizar análise de milhares de transações financeiras e identificar possíveis transações suspeitas.
+> Precisamos desenvolver uma aplicação Web tradicional (server-side) para realizar análise de milhares de transações financeiras e identificar possíveis transações suspeitas.
 > Para realizar essa análise, precisaremos desenvolver uma tela para upload de arquivos, que deve suportar diversos formatos distintos, bem como implementar algoritmos para extração, validação e persistência das informações. Boas práticas de orientação a objetos, design patterns e princípios SOLID serão essenciais. Também será desenvolvido um CRUD de usuários, bem como mecanismos de autenticação e autorização, para proteger a aplicação.
+
+#### Observação
+> Apesar de o desafio ser via back-end, foi usado um template da [HTML5UP](https://html5up.net/) como base front-end para subir o servidor Flask e testar a aplicação.
 
 ### Tecnologias Usadas
 > - **LANG:** ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
