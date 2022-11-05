@@ -5,6 +5,14 @@
 > Precisamos desenvolver uma aplicação Web tradicional(server-side) para realizar análise de milhares de transações financeiras e identificar possíveis transações suspeitas.
 > Para realizar essa análise, precisaremos desenvolver uma tela para upload de arquivos, que deve suportar diversos formatos distintos, bem como implementar algoritmos para extração, validação e persistência das informações. Boas práticas de orientação a objetos, design patterns e princípios SOLID serão essenciais. Também será desenvolvido um CRUD de usuários, bem como mecanismos de autenticação e autorização, para proteger a aplicação.
 
+### Tecnologias Usadas
+> - **LANG:** ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+> - **FW:** ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+> - **DB:** ![SQLITE](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+> - **ORM:** ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
+> - **AUTH:** ![BCRYPT](https://img.shields.io/badge/bcrypt-543DE0?style=for-the-badge&logo=bcrypt&logoColor=white)
+> - **TEST:** ![Pytest](https://img.shields.io/badge/Pytest-239120?style=for-the-badge&logo=python&logoColor=white)
+> 
 #### Transações
 
 ##### Importação de Transações
