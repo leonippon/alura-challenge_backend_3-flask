@@ -19,6 +19,8 @@
 > Implemente uma classe 'Controller' que receberá a requisição contendo o arquivo e por enquanto você deve apenas imprimir no console o nome do arquivo importado e seu tamanho em megabytes.
 > A funcionalidade de upload de arquivos deve permitir importar arquivos no formato CSV ou XML, que serão os arquivos contendo todas as transações financeiras dos bancos realizadas em um determinado dia.
 
+![Upload](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/transacoes_importar.png)
+
 ##### Leitura do arquivo
 > Cada linha do arquivo representa uma transação financeira distinta e as informações dela são separadas por vírgula.
 > Quando da leitura das imformações lidas do arquivo que foi importado, cada linha é impressa no console.
@@ -33,7 +35,6 @@
 >   - Valor da Transação
 >   - Data da Transação
 >   - ID do Usuário Responssável
->
 
 ##### Validação das Informações
 > Cada arquivo deverá conter transações de apenas um determinado dia.
@@ -52,6 +53,14 @@
 ##### Detalha Importação
 > Na tabela de importações, há um botão de "Detalhar Importação" que leva à outra página.
 > Essa página, detalha quem e quando importou as transações, bem como uma tabela com todas importações desse dia.
+
+![Imported](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/transacoes_importadas.png)
+
+#### Outras Telas
+> - [Importar Arquivo](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/transacoes_importar.png)
+> - [Detalhar Importação 1](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/detalhar_cabecalho.png)
+> - [Detalhar Importação 2](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/detalhar_corpo.png)
+> - [Detalhar Importação 2](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/detalhar_corpo2.png)
 
 #### Usuários
 > Para proteger o acesso à aplicação, precisamos desenvolver um cadastro de usuários e posteriormente implementar um mecanismo de controle de acesso.
@@ -73,6 +82,13 @@
 > A aplicação restringe o acesso à todas as páginas(exceto a página de login) para os usuários que não estejam previamente autenticados.
 > Há uma barra de menu na aplicação, contendo os links para as funcionalidades existentes, bem como um botão para o usuário realizar o logout. Esse menu somente deve ser exibido para usuários autenticados.
 
+![Lista de Usuários](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/usarios_listar.png)
+
+##### Outras Telas
+> - [Tela de Login](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/home_login.png)
+> - [Editar Usuário 1](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/usuarios_editar_1.png)
+> - [Editar Usuário 2](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/usuarios_editar_2.png)
+
 ##### Responsável pela Transação
 > Cada transação terá nela gravada o ID do usuário logado que realizou a importação do arquivo.
 > A tabela de transações mostra o nome do usuário que realizou seu upload.
@@ -91,5 +107,14 @@
 > Haverá uma tabela para cada uma das regras acima que for violada.
 > Se nenhuma regra for violada no mês, haverá uma mensagem avisando.
 
+![Relatório Gerar](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/relatorio_gerar.png)
+
+##### Outras Telas
+> - [Relatório Detalhar 1](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/relatorio_contas.png)
+> - [Relatório Detalhar 2](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/relatorio_agencias.png)
+
 #### Testes Automatizados
 > Há um teste para cada regra descrita acima.
+
+#### Outras Telas
+> - [Home](https://github.com/leonippon/alura-challenge_backend_3-flask/blob/master/screenshots/home.png)
